@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gotham>
+    <Batman>
+        <Habilidades>
+            <Personal>
+                Habilidades como detective. Intelecto nivel genio.​ 
+                Brillante estratega y acróbata experto. 
+                Dominio de artes marciales y técnicas de sigilo e intimidación.
+                Escapismo. Uso de equipamiento, dispositivos y armamento de alta tecnología.
+            </Personal>
+            <Armas></Armas>
+        </Habilidades>
+    </Batman>
+    <Villanos></Villanos>
+</Gotham>

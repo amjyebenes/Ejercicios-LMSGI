@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hogwarts>
+    <casas>
+        <gryffindor>
+            <descripcion> Casa roja y amarilla que mola bastante</descripcion>
+            <personajes>
+                <personaje nombre="Harry Potter" />
+                <personaje nombre="Hermione Granger" />
+                <personaje nombre="Ron Weasley" />
+                <personaje nombre="Hagrid" />
+                <personaje nombre="Dobby" />
+            </personajes>
+
+        </gryffindor>
+        <slytherin>
+            <descripcion> Casa roja y amarilla que mola bastante</descripcion>
+            <personajes>
+                <personaje nombre="Harry Potter" />
+                <personaje nombre="Hermione Granger" />
+                <personaje nombre="Ron Weasley" />
+                <personaje nombre="Hagrid" />
+                <personaje nombre="Dobby" />
+            </personajes>
+
+        </slytherin>
+    </casas>
+</hogwarts>

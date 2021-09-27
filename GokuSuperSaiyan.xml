@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dragonball>
+    <personaje nombre="Goku">
+        <evolucion tipo="Super Saiyan 3" />
+    </personaje>
+    <personaje nombre="Bulma" />
+    <personaje nombre="Son Gohan" />
+    <personaje nombre="Piccolo" />
+    <personaje nombre="Vegeta" />
+    <personaje nombre="Krilim" />
+    <personaje nombre="Bu">
+        <descripcion> Es rosa </descripcion>
+    </personaje>
+    <personaje nombre="Yamcha" />
+    <personaje nombre="Freezer" />
+</dragonball>
