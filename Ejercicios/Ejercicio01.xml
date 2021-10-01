@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Ejercicio01.dtd" type="application/xml-dtd"?>
+<placabase>
+    <componentes>
+        <microprocesador>
+            Ryzen 5 3600 3.2 GHz
+        </microprocesador>
+        <memoria>
+            G-Skills Trident Z 16GB 3200Mhz DDR4
+        </memoria>
+        <modelo>
+            Aorus B550m Pro Elite
+        </modelo>
+        <fabricante>
+            <asus/>
+        </fabricante>
+    </componentes>
+    <componentes>
+        <microprocesador>
+            Intel i11700K 3.6GHz
+        </microprocesador>
+        <memoria>
+            32GB DDR4
+        </memoria>
+        <modelo>
+            K3123-HV
+        </modelo>
+        <fabricante>
+            <intel/>
+        </fabricante>
+    </componentes>
+</placabase>
