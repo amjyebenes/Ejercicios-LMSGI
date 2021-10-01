@@ -7,6 +7,7 @@
   <!ELEMENT equipo EMPTY>
   <!ATTLIST equipo nombre CDATA #REQUIRED>
   <!ATTLIST equipo jugadores IDREFS #IMPLIED>
+  
 ]>
 
 <futbol>
@@ -15,5 +16,5 @@
   <jugador nombre="Diego Armando Maradona" codigo="dam" />
   <jugador nombre="Johan Cruyff" codigo="jc" />
   <equipo nombre="Società Sportiva Calcio Napoli" jugadores="Maradona" />
-  <equipo nombre="Futbol Club Barcelona" jugadores="Cruyff, Maradona" />
+  <equipo nombre="Futbol Club Barcelona" jugadores="Cruyff Maradona" />
 </futbol>

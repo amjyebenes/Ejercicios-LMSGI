@@ -2,7 +2,7 @@
 <!DOCTYPE cuadros [
   <!ELEMENT cuadros (cuadro*)>
   <!ELEMENT cuadro EMPTY>
-  <!ATTLIST cuadro titulo ID #REQUIRED>
+  <!ATTLIST cuadro titulo CDATA #REQUIRED>
   <!ATTLIST cuadro autor CDATA #REQUIRED>
 ]>
 

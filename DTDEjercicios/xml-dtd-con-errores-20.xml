@@ -2,6 +2,7 @@
 <!DOCTYPE pelicula [
   <!ELEMENT pelicula EMPTY>
   <!ATTLIST pelicula titulo CDATA #IMPLIED>
+  <!ATTLIST pelicula genero CDATA #IMPLIED>
 ]>
 
 <pelicula titulo="La diligencia" genero="oeste" />
