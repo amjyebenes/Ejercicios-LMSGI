@@ -3,7 +3,7 @@
   <!ELEMENT futbol (jugador*)>
   <!ELEMENT jugador EMPTY>
   <!ATTLIST jugador nombre NMTOKENS #REQUIRED>
-  <!ATTLIST jugador codigo ID NCnamed#REQUIRED>
+  <!ATTLIST jugador codigo ID #REQUIRED>
 ]>
 
 <futbol>
