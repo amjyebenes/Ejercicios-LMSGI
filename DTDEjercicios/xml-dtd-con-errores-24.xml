@@ -15,5 +15,5 @@
   <jugador nombre="Diego Armando Maradona" codigo="dam" />
   <jugador nombre="Johan Cruyff" codigo="jc" />
   <equipo nombre="Società Sportiva Calcio Napoli" jugadores="dam" />
-  <equipo nombre="Futbol Club Barcelona" jugadores="jc" />
+  <equipo nombre="Futbol Club Barcelona" jugadores="jc dam" />
 </futbol>

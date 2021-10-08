@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE musica [
+    <!ELEMENT musica (artistas, canciones, nacionalidades)>
+    <!ELEMENT artistas (artista*)>
+    <!ELEMENT artista EMPTY>
+    <!ELEMENT canciones (cancion*)>
+    <!ELEMENT cancion EMPTY>
+    <!ELEMENT nacionalidades (nacionalidad*)>
+    <!ELEMENT nacionalidad EMPTY>
+    <!ATTLIST artista nombre ID #REQUIRED
+                       fecha NMTOKEN #IMPLIED
+                       nacionalidad IDREF #IMPLIED>
+    <!ATTLIST cancion nombre NMTOKENS #REQUIRED
+                        duracion CDATA #IMPLIED
+                        artista IDREF #IMPLIED> 
+    <!ATTLIST nacionalidad nombre CDATA #REQUIRED
+                             codigo ID #REQUIRED>                                      
+]>
+<musica>
+    <artistas>
+        <artista nombre="Juan_Dominguez" fecha="21-5-47" nacionalidad= "ESP" />
+        <artista nombre="John_Lopez" fecha="24-5-14" nacionalidad= "USA" />
+        <artista nombre="Freddy_Lopez" fecha="25-6-99" nacionalidad= "UK" />
+    </artistas>
+    <canciones>
+        <cancion nombre="bahia nocturna melancolica" />
+        <cancion nombre="Grease" duracion="3:41"/>
+        <cancion nombre="viva la vida" />
+    </canciones>
+    <nacionalidades>
+        <nacionalidad nombre="España" codigo="ESP" />
+        <nacionalidad nombre="United States of America" codigo="USA" />
+        <nacionalidad nombre="United Kingdom" codigo="UK" />
+    </nacionalidades>
+</musica>
