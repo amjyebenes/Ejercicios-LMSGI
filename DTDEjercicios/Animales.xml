@@ -13,7 +13,7 @@
     <herbivoro identificador="AP" nombre="Agaporni" especie="MH" planta_alimento="panizo"/>
     <omnivoro identificador="G" nombre="Gato" especie="MO" alimento="pienso"/>
     <insecto identificador="WJ" nombre="Wandomer" especie="submarino" habitat="agua">
-        Wandomer Jinserto
+        Wandomer Jinserto es un insecto
     </insecto>
 </animales>
 <libro animales="LI P M AP G" especie="MC MO MH Detritívoro"/>
