@@ -1,0 +1,23 @@
+<!ENTITY % caracteristicas "identificador ID #REQUIRED nombre CDATA #IMPLIED evolucion ID #IMPLIED">
+<!ELEMENT universo (goku*, trunk+, celula?, krilin)*>
+<!ELEMENT goku EMPTY>
+<!ATTLIST goku %caracteristicas;
+                amistad IDREF #REQUIRED>
+
+<!ELEMENT trunk EMPTY>
+<!ATTLIST trunk %caracteristicas;
+                arma_utilizada CDATA #IMPLIED>
+
+<!ELEMENT celula EMPTY>
+<!ATTLIST celula %caracteristicas;
+                 nivel_potencia CDATA #IMPLIED>
+
+<!ELEMENT krilin (#PCDATA | mision)*>
+<!ATTLIST krilin   %caracteristicas;
+                    cabello NMTOKENS #FIXED (calvo | pelo_corto | pelo_largo)>
+
+<!ELEMENT mision (#PCDATA)>
+
+<!ELEMENT serie EMPTY>
+<!ATTLIST serie personajes IDREFS #REQUIRED
+                evoluciones  IDREFS #REQUIRED>

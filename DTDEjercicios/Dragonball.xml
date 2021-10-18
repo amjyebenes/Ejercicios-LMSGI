@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Dragonball.dtd" type="application/xml-dtd"?>
+<!DOCTYPE system [
+    <!ELEMENT krilin "enano peleon">
+]>
+<universo>
+    <goku identificador="SG" nombre="Son Goku" evolucion="SS2" amistad="T"/>
+    <trunk identificador="T" nombre="Trunks" evolucion="SS" arma_utilizada="espada"/>
+    <celula identificador="CEL" nombre="Celula" evolucion="N2" nivel_potencia="megasuper"/>
+    <krilin identificador="K" nombre="Krilin Maquina" evolucion="SS4" cabello="calvo">
+        <mision>Pegar tortas</mision>
+    </krilin>
+    <trunk identificador="TK" nombre="Trunks 2" evolucion="SS5" arma_utilizada="katana"/>
+    <celula identificador="CEL2" nombre="Super Celula" evolucion="Super" nivel_potencia="maxima"/>
+    <krilin identificador="K2" nombre="Krilin" evolucion="SS2" cabello="pelo_largo">
+        Krilin ataca de nuevo
+    </krilin>
+</universo>
+<serie personajes="SG T K" evoluciones="SS2 SS4"/>
+<serie personajes="TK K2 CEL" evoluciones="Super SS5 N2"/>
