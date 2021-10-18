@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE animales[
-    <!ENTITY % attcarnivoros "<!ATTLIST carnivoros nombre ID #REQUIRED especie NMTOKEN #IMPLIED>">
-    <!ENTITY % attherviboros "<!ATTLIST herviboros nombre ID #REQUIRED especie NMTOKEN #IMPLIED>">
-    <!ELEMENT animales (carnivoro*, herbivoro+, omnivoro?, insecto)*>
-    <!ELEMENT animal EMPTY>
-    <!ELEMENT herbivoro EMPTY>  
-    <!ELEMENT carnivoro EMPTY>      
-    <!ELEMENT omnivoro EMPTY>
-    <!ELEMENT insecto (#PCDATA | nombrecientifico)*>
-    <!ELEMENT nombrecientifico (#PCDATA)>
+<?xml-model href="Animales.dtd" type="application/xml-dtd"?>
+<!DOCTYPE system [
+    <!ELEMENT insecto "animal muy pequeño">
 ]>
 <animales>
-    <carnivoro/>
-    <insecto>
+    <carnivoro identificador="LI" nombre="Lince Iberico" especie="MC" animal_alimento="C"/>
+    <herbivoro identificador="C" nombre="Conejo" especie="MH" planta_alimento="matojos"/>
+    <omnivoro identificador="P" nombre="Perro" especie="MO" alimento="pienso"/>
+    <insecto identificador="M" nombre="MilPies" especie="Detritívoro" habitat="tierra">
+        <nombrecientifico>Lupulus amniotus</nombrecientifico>
     </insecto>
-    <carnivoro/>
-    <insecto>
-    </insecto>
-    <carnivoro/>
-    <insecto>
-    </insecto>
-    <carnivoro/>
-    <insecto>
+    <herbivoro identificador="AP" nombre="Agaporni" especie="MH" planta_alimento="panizo"/>
+    <omnivoro identificador="G" nombre="Gato" especie="MO" alimento="pienso"/>
+    <insecto identificador="WJ" nombre="Wandomer" especie="submarino" habitat="agua">
+        Wandomer Jinserto
     </insecto>
 </animales>
+<libro animales="LI P M AP G" especie="MC MO MH Detritívoro"/>
+<libro animales="WJ" especie="submarino"/>

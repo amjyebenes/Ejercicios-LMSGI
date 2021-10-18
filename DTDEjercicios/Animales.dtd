@@ -1,0 +1,23 @@
+<!ENTITY % caracteristicas "identificador ID #REQUIRED nombre CDATA #IMPLIED especie ID #IMPLIED">
+<!ELEMENT animales (carnivoro*, herbivoro+, omnivoro?, insecto)*>
+<!ELEMENT carnivoro EMPTY>
+<!ATTLIST carnivoro %caracteristicas;
+                    animal_alimento IDREF #REQUIRED>
+
+<!ELEMENT herbivoro EMPTY>
+<!ATTLIST herviboro %caracteristicas;
+                    planta_alimento CDATA #IMPLIED>
+
+<!ELEMENT omnivoro EMPTY>
+<!ATTLIST omnivoro %caracteristicas;
+                    alimento CDATA #IMPLIED>
+
+<!ELEMENT insecto (#PCDATA | nombrecientifico)*>
+<!ATTLIST insecto   %caracteristicas;
+                    habitat NMTOKENS #FIXED (tierra | agua | aire)>
+
+<!ELEMENT nombrecientifico (#PCDATA)>
+
+<!ELEMENT libro EMPTY>
+<!ATTLIST libro animales IDREFS #REQUIRED
+                especie  IDREFS #REQUIRED>
