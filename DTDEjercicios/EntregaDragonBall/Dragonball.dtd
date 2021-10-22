@@ -16,7 +16,10 @@
 <!ATTLIST krilin   %caracteristicas;
                     cabello NMTOKENS #FIXED (calvo | pelo_corto | pelo_largo)>
 
-<!ELEMENT mision (#PCDATA)>
+<!ELEMENT mision (objetivo, (aliados | enemigos)*)>
+<!ELEMENT objetivo (#PCDATA)>
+<!ELEMENT aliados (#PCDATA)>
+<!ELEMENT enemigos (#PCDATA)>
 
 <!ELEMENT serie EMPTY>
 <!ATTLIST serie personajes IDREFS #REQUIRED
