@@ -1,20 +1,22 @@
+<!ELEMENT universo (goku?, trunk+, celula?, krilin, serie)*>
 <!ENTITY % caracteristicas "identificador ID #REQUIRED nombre CDATA #IMPLIED evolucion ID #IMPLIED">
-<!ELEMENT universo (goku*, trunk+, celula?, krilin)*>
+<!ENTITY krilin "enano peleon">
 <!ELEMENT goku EMPTY>
-<!ATTLIST goku %caracteristicas;
-                amistad IDREF #REQUIRED>
+<!ATTLIST goku amistad IDREF #REQUIRED
+                %caracteristicas;>
 
 <!ELEMENT trunk EMPTY>
-<!ATTLIST trunk %caracteristicas;
-                arma_utilizada CDATA #IMPLIED>
+<!ATTLIST trunk arma_utilizada CDATA #IMPLIED
+                %caracteristicas;>
 
 <!ELEMENT celula EMPTY>
-<!ATTLIST celula %caracteristicas;
-                 nivel_potencia CDATA #IMPLIED>
+<!ATTLIST celula nivel_potencia CDATA #IMPLIED
+                 %caracteristicas;>
 
 <!ELEMENT krilin (#PCDATA | mision)*>
-<!ATTLIST krilin   %caracteristicas;
-                    cabello NMTOKENS #FIXED (calvo | pelo_corto | pelo_largo)>
+<!ATTLIST krilin actitud CDATA #FIXED "cabreado"
+                 cabello (calvo | pelo_corto | pelo_largo) #IMPLIED 
+                 %caracteristicas;>
 
 <!ELEMENT mision (objetivo, (aliados | enemigos)*)>
 <!ELEMENT objetivo (#PCDATA)>
