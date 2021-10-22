@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="Dragonball.dtd" type="application/xml-dtd"?>
 <!DOCTYPE system [
-    <!ELEMENT krilin "enano peleon">
+    <!ENTITY krilin "enano peleon">
 ]>
 <universo>
     <goku identificador="SG" nombre="Son Goku" evolucion="SS2" amistad="T"/>
