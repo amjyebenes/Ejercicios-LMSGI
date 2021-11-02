@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE amigos SYSTEM "Amigos.dtd">
+<amigos descripcion = "Estos son mis amigos">
+    <grupo nombre ="ajedrez" calidad_amistad = "buena"/>
+    <grupo nombre ="ingenieria" calidad_amistad = "muy_buena"/>
+    <grupo nombre ="gimnasio" calidad_amistad = "normal"/>
+
+    <persona nombre = "pepe" edad = "23" localidad="lucena" grupo="ajedrez" conoce_a="jorge adrian">
+        Este es mi amigo del grupo de ajedrez.
+    </persona>
+    <persona nombre = "maria" edad = "19" localidad="carcabuey" grupo="ajedrez" conoce_a="jorge pepe adrian">
+        Es la hermana de pepe, tambien jugabamos a ajedrez.
+    </persona>
+    <persona nombre = "jorge" edad = "22" localidad="jaen" grupo="ingenieria" annos_amistad="5">
+        Es un amigo conocido en la ingenieria. A el le gusta hacer aprender hacking y los coches.
+    </persona>
+    <persona nombre = "adrian" edad = "21" localidad="priego" grupo="gimnasio" conoce_a="maria"/>
+    
+    <quedada grupos_invitados = "ajedrez gimnasio" fecha="29oct2021">
+        <lugar nombre = "aquapark">
+            <evento nombre = "torremolinos aquapark" es_cumpleaños = "si"/>
+            <fiesta>Es el cumpleaños de Maria</fiesta>
+        </lugar>
+    </quedada>
+    <quedada grupos_invitados = "ingenieria" fecha="11nov2021">
+        <lugar nombre = "casa jorge" hora = "19PM">
+            <evento nombre = "maraton hacking parrot OS" diversion = "asegurada"/>
+            <evento nombre = "estudio hacking etico kali linux"/>
+        </lugar>
+    </quedada>
+</amigos>

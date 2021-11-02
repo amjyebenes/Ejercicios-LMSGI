@@ -1,0 +1,21 @@
+<!ELEMENT amigos (grupo+ | persona? | quedada)*>
+<!ATTLIST amigos descripcion CDATA #REQUIRED>
+<!ENTITY % caracteristicas "nombre ID #REQUIRED edad NMTOKEN #IMPLIED localidad NMTOKEN #IMPLIED grupo IDREF #REQUIRED conoce_a IDREFS #IMPLIED">
+<!ENTITY hacking "cosas buenas, no se preocupen, ">
+<!ELEMENT grupo EMPTY>
+<!ATTLIST grupo nombre ID #REQUIRED
+                calidad_amistad NMTOKENS #IMPLIED>
+<!ELEMENT persona (#PCDATA)>
+<!ATTLIST persona  %caracteristicas;
+                   annos_amistad NMTOKEN #IMPLIED >
+<!ELEMENT quedada (lugar)>
+<!ATTLIST quedada grupos_invitados IDREFS #REQUIRED
+                  fecha NMTOKEN #IMPLIED>
+<!ELEMENT lugar (persona? | (evento , fiesta?))*>
+<!ATTLIST lugar nombre NMTOKENS #REQUIRED
+                hora CDATA #IMPLIED>
+<!ELEMENT evento EMPTY>
+<!ATTLIST evento nombre NMTOKENS #REQUIRED 
+          es_cumpleaños (si | no) "no"
+          diversion (asegurada | no_tanto) #FIXED "asegurada">
+<!ELEMENT fiesta (#PCDATA)>
