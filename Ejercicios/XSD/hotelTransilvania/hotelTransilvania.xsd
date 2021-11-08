@@ -12,9 +12,26 @@
     <xs:complexType name="tipoPersonaje">
         <xs:sequence>
             <xs:element name="poder" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="debilidad" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="debilidad" type="debilidades" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="nombre" type="xs:string" />
+        <xs:attribute name="nombre" type="minimoUncaracter" />
     </xs:complexType>
+
+    <xs:simpleType name="minimoUncaracter">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="debilidades">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ajo"/>
+            <xs:enumeration value="Fuego"/>
+            <xs:enumeration value="Sol"/>
+            <xs:enumeration value="Fuego"/>
+            <xs:enumeration value="Estaca"/>
+            <xs:enumeration value="Cruz"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>
