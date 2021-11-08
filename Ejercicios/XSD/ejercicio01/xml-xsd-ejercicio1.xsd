@@ -42,7 +42,7 @@
 
     <xs:simpleType name="tipoProvincia2">
         <xs:restriction base="xs:string">
-            <xs:pattern value="Alava|Almeria|Avila"/>
+            <xs:pattern value="[ÁAaá]lava|[Aa]lmer[íia]|[ÁAaá]vila"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
