@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="usuario" type="tipoUsuario"/>
+
+    <xs:complexType name="tipoUsuario">
+        <xs:all>
+            <xs:element name="ultimasSesiones" type="tipoSesiones"/>
+            <xs:element name="marcadores" type="tipoMarcadores"/>
+            <xs:element name="mensajes" type="tipoMensajes"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:attribute name="id" type="tipoCorreo"></xs:attribute>
+
+    <xs:simpleType name="tipoCorreo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\w*[@]\w*[.]com|es"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tipoSesiones">
+        <xs:sequence>
+            <xs:element name="sesion" type="tipoSesion" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoSesion" mixed="true">
+        <xs:attribute name="fecha" type="tipoFecha"/>
+        <xs:attribute name="hora" type="tipoHora"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoFecha">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoHora">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}[:]\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tipoMarcadores">
+        <xs:sequence>
+            <xs:element name="marcador" type="tipoMarcador" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- FALTA TERMINAR ESTO-->
+
+    <xs:complexType name="tipoMarcador" mixed="true">
+        <xs:simpleContent>
+            <xs:restriction base="textoURL">
+                <xs:pattern value="http[:][//]|https[:][//]\w*[.]com|es"/>
+            </xs:restriction>
+        </xs:simpleContent>
+        <xs:attribute name="nombre" type="xs:string"/>
+    </xs:complexType>
+
+
+</xs:schema>
