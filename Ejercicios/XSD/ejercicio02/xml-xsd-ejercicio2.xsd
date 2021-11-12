@@ -31,10 +31,10 @@
     </xs:complexType>
     
     <xs:complexType name="tipoFecha">
-        <xs:sequence>
+        <xs:all>
             <xs:element name="dia" type="xs:string"/>
             <xs:element name="mes" type="xs:string"/>
             <xs:element name="anyo" type="xs:string"/>
-        </xs:sequence>
+        </xs:all>
     </xs:complexType>
 </xs:schema>
