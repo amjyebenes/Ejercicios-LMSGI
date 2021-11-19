@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="youtube" type="tipoYoutube"/>
+
+    <xs:complexType name="tipoYoutube">
+        <xs:all>
+            <xs:element name="videos" type="tipoVideos"/>
+            <xs:element name="publicidad" type="tipoPublicidad"/>
+            <xs:element name="idiomasDisponibles" type="tipoIdiomas"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoVideos" mixed="true">
+        <xs:all>
+            <xs:element name="video" type="tipoVideo"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoVideo" mixed="true">
+        <xs:all>
+            <xs:element name="url" type="xs:string"/>
+            <xs:element name="visualizaciones" type="xs:integer"/>
+            <xs:element name="comentarios" type="tipoComentarios"/>
+            <xs:element name="subscriptores" type="tipoSubscriptores"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoComentarios">
+        <xs:all>
+            <xs:element name="buenos" type="xs:integer"/>
+            <xs:element name="malos" type="xs:integer"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoSubscriptores">
+        <xs:all>
+            <xs:element name="subscriptor" type="tipoSubscriptor"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoSubscriptor">
+        <xs:all>
+            <xs:element name="subscriptor" type="tipoSubscriptor"/>
+        </xs:all>
+        <xs:attribute name="codigo" type="tipoCodigo"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoCodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}-\[\w{2}\[-\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
