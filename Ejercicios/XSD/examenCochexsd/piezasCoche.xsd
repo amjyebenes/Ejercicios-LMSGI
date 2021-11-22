@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="piezasCoche" type="tipoPiezasCoche"/>
+
+<xs:complexType name="tipoPiezasCoche">
+  <xs:sequence>
+    <xs:element name="coche" type="tipoCoche"/>
+    <xs:element name="piezas" type="tipoPiezas" />
+    <xs:element name="disponibilidad" type="tipoDisponibilidad" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoCoche">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute  name="marca" type="xs:string"/>
+      <xs:attribute  name="modelo" type="xs:string"/>
+      <xs:attribute  name="anioConstruccion" type="xs:short"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="tipoPiezas">
+  <xs:sequence>
+    <xs:element name="motor" type="tipoMotor"/>
+    <xs:element name="neumaticos" type="tipoNeumaticos"/>
+    <xs:element name="materialDeChasis" type="tipoMaterialDeChasis">
+      <xs:annotation>
+        <xs:documentation>Otros valores válidos serán &lt;titani> y &lt;tungsteno></xs:documentation>
+      </xs:annotation>
+    </xs:element>
+    <xs:element name="carroceria" type="tipoCarroceria"/>
+    <xs:element name="parabrisas" type="xs:string"/>
+    <xs:element name="asientos" type="tipoAsientos">
+      <xs:annotation>
+        <xs:documentation>Otros valores posibles serían "50cm" "30pulgadas" "45cm"... valores que comienzan por un número seguido de "pulgadas" o "cm"</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+    <xs:element name="tapiceria" type="tipoTapiceria"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="tipoCarroceria">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\w+-\w{2}\d{3}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tipoTapiceria">
+  <xs:sequence>
+    <xs:element name="fabricante" type="xs:string"/>
+    <xs:element name="fechaFabricacion" type="xs:string"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoMotor" mixed="true">
+  <xs:sequence>
+    <xs:element name="modelo" type="tipoModelo"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoModelo" mixed="true">
+ <xs:attribute name="potencia" type="xs:string"/>  
+</xs:complexType>
+
+<xs:complexType name="tipoNeumaticos">
+    <xs:attribute name="anchura" type="xs:short"/>
+    <xs:attribute name="altura" type="xs:byte"/>
+    <xs:attribute name="diametro" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="tipoMaterialDeChasis">
+  <xs:sequence>
+    <xs:element name="aluminio" type="xs:string"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoAsientos">
+  <xs:sequence>
+    <xs:element name="fabricante" type="xs:string"/>
+    <xs:element name="fechaFabricacion" type="xs:string"/>
+    <xs:element name="comodidad" type="xs:string"/>
+  </xs:sequence>
+  <xs:attribute name="cantidad" type="xs:byte"/>
+</xs:complexType>
+
+<xs:simpleType name="tipoDisponibilidad">
+  <xs:list itemType="tipoWeb"/>
+</xs:simpleType>
+
+<xs:simpleType name="tipoWeb">
+  <xs:restriction base="xs:anyURI">
+    <xs:pattern value="www.*.com"></xs:pattern>
+  </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
