@@ -59,9 +59,17 @@
   </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="tipoModelo" mixed="true">
- <xs:attribute name="potencia" type="xs:string"/>  
+<xs:complexType name="tipoModelo">
+  <xs:simpleContent>
+    <xs:extension base="integerModelo">
+      <xs:attribute name="potencia" type="xs:string"/>
+    </xs:extension>
+  </xs:simpleContent>
 </xs:complexType>
+
+<xs:simpleType name="integerModelo">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
 
 <xs:complexType name="tipoNeumaticos">
     <xs:attribute name="anchura" type="xs:short"/>
