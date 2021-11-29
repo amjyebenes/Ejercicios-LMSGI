@@ -21,14 +21,34 @@
 
 <xs:complexType name="tipoFabricante">
     <xs:choice>
-        <xs:element name="canon"/>
+        <xs:element name="canon">
+            <xs:complexType/>
+        </xs:element>
+        <xs:element name="epson">
+            <xs:complexType/>
+        </xs:element>
+        <xs:element name="samsung">
+            <xs:complexType/>
+        </xs:element>
+        <xs:element name="apple">
+            <xs:complexType/>
+        </xs:element>
+        <xs:element name="philips">
+            <xs:complexType/>
+        </xs:element>
     </xs:choice>
 </xs:complexType>
 
 <xs:complexType name="tipoOferta" mixed="true">
-    <xs:attribute name="precioHabitual" type="xs:integer"/>
+    <xs:attribute name="precioHabitual" type="tipoPrecioHabitual"/>
     <xs:attribute name="descuento" type="tipoDescuento"/>
 </xs:complexType>
+
+<xs:simpleType name="tipoPrecioHabitual">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
 
 <xs:simpleType name="tipoDescuento">
     <xs:restriction base="xs:string">
@@ -125,13 +145,11 @@
     </xs:restriction>
 </xs:simpleType>
 
-<xs:complexType name="tipoAgregado">
+<xs:complexType name="tipoAgregado" mixed="true">
     <xs:simpleContent>
         <xs:extension base="tipoFechaLarga">
             <xs:attribute name="value" type="xs:string"/>
         </xs:extension>
     </xs:simpleContent>
 </xs:complexType>
-
-
 </xs:schema>
