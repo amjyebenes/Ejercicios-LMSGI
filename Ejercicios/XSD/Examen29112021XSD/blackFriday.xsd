@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ofertasBlackFriday" type="tipoOfertasBlackFriday"/>
+
+<xs:complexType name="tipoOfertasBlackFriday">
+    <xs:sequence>
+        <xs:element name="articulo" type="tipoArticulo"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoArticulo" mixed="true">
+    <xs:all>
+        <xs:element name="fabricante" type="tipoFabricante"/>
+        <xs:element name="oferta" type="tipoOferta"/>
+        <xs:element name="valoraciones" type="tipoValoraciones"/>
+        <xs:element name="preguntas" type="tipoPreguntas"/>
+        <xs:element name="agregadoACestaDeCompra" type="tipoAgregado"/>        
+    </xs:all>
+    <xs:attribute name="codigo" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="tipoFabricante">
+    <xs:choice>
+        <xs:element name="canon"/>
+    </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="tipoOferta" mixed="true">
+    <xs:attribute name="precioHabitual" type="xs:integer"/>
+    <xs:attribute name="descuento" type="tipoDescuento"/>
+</xs:complexType>
+
+<xs:simpleType name="tipoDescuento">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{2}[%]"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tipoValoraciones">
+    <xs:all>
+        <xs:element name="positiva" type="tipoPosNeg"/>
+        <xs:element name="negativa" type="tipoPosNeg"/>
+        <xs:element name="masVotada" type="tipoPosNegDeriv1"/>
+    </xs:all>
+</xs:complexType>
+
+<xs:complexType name="tipoPosNeg">
+<xs:sequence>
+    <xs:element name="autor" type="unionNombresMascFem"/>
+    <xs:element name="texto" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoPosNegDeriv1">
+    <xs:complexContent>
+        <xs:extension base="tipoPosNeg">
+            <xs:sequence>
+                <xs:element name="fecha" type="tipoFecha"/>
+            </xs:sequence>
+            <xs:attribute name="votosFavorables" type="xs:integer"/>
+            <xs:attribute name="votosDesfavorables" type="xs:integer"/>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType> 
+
+<xs:simpleType name="tipoFecha">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{2}[/]\d{2}[/]\d{4} \d{2}[:]\d{2}[:]\d{2} (PM|AM)"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoNombreMasc">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="(Pedro|Javier|Manolo|Álvaro|Gonzalo)"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoNombreFem">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="(Estela|Araceli|Inma|Lucía|Silvia)"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="unionNombresMascFem">
+    <xs:union memberTypes="tipoNombreMasc tipoNombreFem"/>
+</xs:simpleType>
+
+<xs:simpleType name="tipoNombreLista">
+    <xs:list itemType="unionNombresMascFem"/>
+</xs:simpleType>
+
+<xs:complexType name="tipoPreguntas">
+    <xs:sequence>
+        <xs:element name="pregunta" type="tipoPosNegDeriv2"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoPosNegDeriv2">
+    <xs:complexContent>
+        <xs:extension base="tipoPosNeg">
+            <xs:sequence>
+                <xs:element name="respuestas" type="tipoRespuestas" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType> 
+
+<xs:complexType name="tipoRespuestas" mixed="true">
+    <xs:sequence>
+        <xs:element name="respuesta" type="tipoRespuesta"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoRespuesta" mixed="true">
+    <xs:all>
+        <xs:element name="votantesEnPositivo" type="tipoNombreLista"/>
+        <xs:element name="votantesEnNegativo" type="tipoNombreLista"/>
+    </xs:all>
+    <xs:attribute name="autor" type="unionNombresMascFem"/>
+</xs:complexType>
+
+<xs:simpleType name="tipoFechaLarga">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="(lunes|martes|miercoles|jueves|viernes|sabado|domingo) \d{2} (de) (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre) (de) \d{4}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tipoAgregado">
+    <xs:simpleContent>
+        <xs:extension base="tipoFechaLarga">
+            <xs:attribute name="value" type="xs:string"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+
+</xs:schema>
