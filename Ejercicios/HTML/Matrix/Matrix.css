@@ -1,6 +1,9 @@
 html,body{
     box-sizing: border-box;
 }
+*, *:before, *:after{
+    box-sizing: inherit;
+}
 body {
     background: url("images/fondomatrix.jpg");
     color: #166d00;
