@@ -1,0 +1,17 @@
+html,body{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    background-color:rgb(255, 255, 255);
+    border:1px solid red;
+    b
+
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-container: stretch;
+}
