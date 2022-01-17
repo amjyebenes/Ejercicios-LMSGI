@@ -1,0 +1,31 @@
+html,body{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    background-color:rgb(255, 255, 255);
+    width: 1300px;
+    height: 580px;
+}
+.flex-container > div{
+    width: 150px;
+    height: 2.5rem;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    padding: 5px;
+
+}
+.flex-container {
+    width: 950px;
+    height: 95vh;
+    display: flex;
+}
+.body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
