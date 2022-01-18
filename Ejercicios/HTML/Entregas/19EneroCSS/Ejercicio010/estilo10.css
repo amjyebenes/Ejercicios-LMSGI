@@ -1,0 +1,52 @@
+html,body{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    background-color:rgb(255, 255, 255);
+    width: 1300px;
+    height: 580px;
+}
+.flex-container > div{
+    width: 50%;
+    height: 5rem;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    padding: 5px;
+    
+}
+.flex-container {
+    width: 950px;
+    height: 95vh;
+    display: flex;
+    border: 3px solid red;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.flex-container > div:nth-child(1){
+    height: 10rem; 
+}
+.flex-container > div:nth-child(2){
+    height: 11rem; 
+}
+.flex-container > div:nth-child(3){
+    height: 12.1rem; 
+}
+.flex-container > div:nth-child(4){
+    height: 3rem; 
+}
+.flex-container > div:nth-child(5){
+    height: 20rem; 
+}
+.flex-container > div:nth-child(6){
+    height: 16.1rem; 
+}
