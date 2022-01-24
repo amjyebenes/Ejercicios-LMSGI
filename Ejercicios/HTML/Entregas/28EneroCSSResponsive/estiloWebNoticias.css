@@ -1,0 +1,26 @@
+html,body{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    height: auto;
+}
+.header{
+    display: flex;
+    color:white;
+    background-color: #ca1d16;
+    flex-direction:row;
+    position: fixed;
+    height: 40px;
+}
+.esquinaizquierdaHeader{
+    flex-direction: row;
+
+}
+.desplegable{
+    flex-direction: row;
+    color:white;
+    background-color: #b21c12;
+}
