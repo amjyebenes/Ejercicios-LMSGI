@@ -4,23 +4,19 @@ html,body{
 *, *:before, *:after{
     box-sizing: inherit;
 }
-body{
-    height: auto;
-}
-.header{
-    display: flex;
+
+.menu{
     color:white;
     background-color: #ca1d16;
-    flex-direction:row;
-    position: fixed;
-    height: 40px;
-}
-.esquinaizquierdaHeader{
-    flex-direction: row;
-
+    height: 50px;
 }
 .desplegable{
-    flex-direction: row;
     color:white;
     background-color: #b21c12;
+    font-size: 20px;
+    padding: 15px;
+    margin-left: 10px;
+}
+.letras img{
+    filter: brightness(0) invert(100);
 }
