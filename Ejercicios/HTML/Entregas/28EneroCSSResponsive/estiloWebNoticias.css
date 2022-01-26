@@ -5,12 +5,17 @@ html,body{
     box-sizing: inherit;
 }
 
+body{
+    display: flex;
+}
 .menu{
+    display:flex;
     color:white;
     background-color: #ca1d16;
     height: 50px;
 }
 .desplegable{
+    display:flex;
     color:white;
     background-color: #b21c12;
     font-size: 20px;
@@ -18,5 +23,25 @@ html,body{
     margin-left: 10px;
 }
 .letras img{
+    display:flex;
     filter: brightness(0) invert(100);
+    padding-top:6px;
+    width: 60%;
+    margin-left:10px;
+    padding-top:15px;
 }
+.botones{
+    display:flex;
+    padding-top:17px;
+    justify-content: space-around;
+    width: 150px;
+    margin-left: 20px;
+    filter:opacity(0.6);
+}
+.hora{
+    display:flex;
+    margin-left: 115px;
+    width: 65%;
+    padding-top:15px;
+}
+
