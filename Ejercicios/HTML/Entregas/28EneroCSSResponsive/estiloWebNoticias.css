@@ -17,12 +17,12 @@ body{
 }
 #izquierda{
     display:flex;
-    width: 66.6%;
+    width: 77%;
     height: 100%;
 }
 #derecha{
     display:flex;
-    width: 33.3%;
+    width: 23%;
     height: 100%;
 }
 .desplegable{
@@ -30,8 +30,16 @@ body{
     background-color: #b21c12;
     justify-content: center;
     align-items: center;
-    width: 5%;
+    width: 4%;
     margin-left: 10px;
+}
+.busqueda{
+    display:flex;
+    background-color: #b21c12;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    width: 13%;
 }
 .letras{
     display: flex;
@@ -47,16 +55,112 @@ body{
 .hora{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .hora img{
-    display: flex;
-    width:50%;
+    width: 100%;
 }
 
 .botones{
     display:flex;
     align-items: center;
     filter:opacity(0.6);
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .contenedor{
+        display: flex;
+        justify-content: center;
+    }
+    .grancolumna{
+        display:flex;
+        justify-content: center;
+    }
+    .contenido{
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top:50px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .casillagrande{
+        display:flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .columnapartida{
+        display:flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    
+    .casillapequena{
+        display:flex;
+        width: 33.3%;
+    }
+    
+    .noticia{
+        display:flex;
+        width: 66.6%;
+    }
+    .noticia img{
+        width:100%;
+    }
+    .casillapequena img{
+        width:100%;
+    }
+    
+    .filadenoticias{
+        display:flex;
+        justify-content: center;
+        width: 33.3%;
+        align-items: flex-start;
+        gap:15px;
+    
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    [class*="hora col-sm-5"] {
+        display:none;
+    }
+    [class*="casillagrande"] {
+        display:none;
+    }
+    [class*="casillapequena"]{
+        display:none;
+    }
+    [class="filadenoticias"]{
+        display:flex;
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    [class="grancolumna col-10"] {
+        display:flex;
+        justify-content: center;
+        width:100%;
+    }
+    [class="contenido"] {
+        display:flex;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width:100%;
+    }
+    img{
+        width:100vh;
+    }
+    .botones{
+        display:flex;
+        flex-wrap: nowrap;
+    }
 }
 
