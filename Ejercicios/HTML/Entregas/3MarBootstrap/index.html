@@ -11,27 +11,51 @@
 
 </head>
 <body>
-      <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light row">
-        <div class="d-flex justify-content-center col-sm-2 align-baseline p-5">
+    <nav class="navbar row py-0 my-0 d-flex justify-content-around">
+        <div class="col-md-2 align-baseline d-none d-md-block ms-5 me-0">
             <i class="fa-brands fa-facebook-f fa-xs px-2"></i>
             <i class="fa-brands fa-instagram fa-xs px-2"></i>
             <i class="fa-brands fa-twitter fa-xs px-2"></i>
             <i class="fa-brands fa-youtube fa-xs px-2"></i>
         </div>
-        <div class="container d-flex justify-content-center col-sm-8">
-            <a class="navbar-brand pt-0 mt-0" href="#"><img src="images/elmundotoday.png"></a>
-            <div>
-                <ul class="nav mt-2 mt-lg-0 d-flex">
-                    <li class="nav-item active">
-                        <a class="nav-link text-dark fw-bold" href="#">Iniciar sesión <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a name="nav-link" id="" class="btn btn-info fw-bolder" href="#" role="button">Hazte suscriptor</a>
-                    </li>
-                </ul>
+        <div class="col-md-5 ms-3">
+            <a class="pt-0 mt-0" href="#"><img src="images/elmundotoday.png"></a>
+        </div>
+        <div class="col-md-3 d-none d-md-block">
+            <ul class="nav mt-0 mt-lg-0 d-flex">
+                <li class="nav-item active">
+                    <a class="nav-link text-dark fw-bold fa-sm p-3" href="#">Iniciar sesión<span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a name="nav-link" id="" class="btn btn-info fw-bolder fa-sm p-3" href="#" role="button">Hazte suscriptor</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar my-0 d-none d-md-block text-center" style="background:#f76222;">
+        <span class="fa-xs text-white text-uppercase fw-bold my-0">- LA ACTUALIDAD DEL MAÑANA -</span>
+    </nav>
+
+    <nav class="navbar navbar-light  sticky-top">
+        <div class="container-fluid ">
+            <div class="collapse navbar-collapse text-center d-none d-md-block">
+                <a class="navbar-brand text-uppercase fa-sm" href="#">internacional</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">españa</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">deportes</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">cultura</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">sociedad</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">ciencia y tecnologia</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">gente</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">deportes</a>
+                <a class="navbar-brand text-uppercase fa-sm" href="#">videos</a>
+                <a class="navbar-brand text-uppercase fa-sm me-5" href="#">tienda</a>
+                <i class="fas fa-search mx-5"></i>
             </div>
         </div>
-      </nav>
+    </nav>
+    
+      
       
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
