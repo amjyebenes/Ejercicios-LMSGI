@@ -11,7 +11,7 @@
                 <xsl:call-template name="css"/>
             </head>
             <body>
-                <table>
+                <table width="100%">
                     <tr>
                         <th></th>
                         <th>Gormiti</th>
